@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="body">
+    <div class="the-bapp">
+        <video id="back" src="" autoplay loop></video>
+    </div>
+
+    <div class="mainnnn">
+
+        <div class="nav-bar">
+            <a id="logo1" href="/"><img src="assets/logo.jpg" alt=""></a>
+
+            <div class="search-container">
+                <div class="searchbar">
+                    <div class="search-container">
+
+                        <input class="search-cont" type="text" placeholder="Search.." name="search">
+                        <button class="search-btn" type="submit"><i
+                                class="fa-solid fa-magnifying-glass-location"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="currentlocation">
+                <button onclick="getLocation()" class="btn-location currentlocation"><i
+                        class="fa-solid fa-location-crosshairs"></i>
+                    <p> Use Precise location</p>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="main">
+
+            <div class="wrapper">
+                <div id="one">
+                    <p id="now">Now</p>
+                    <div class="weatherbox">
+                        <div class="w-box">
+
+                            <p class="temperature">0<sup>°C</sup></p>
+                            <img src="assets/clear.png" class="weather-images weather-image-all"></img>
+
+                        </div>
+                        <p class="description">____</p>
+                    </div>
+
+                    <hr>
+
+                    <p class="date"><i class="fa-regular fa-calendar"></i> <span id="date"> Date</span></p>
+
+                    <p class="location"><i class="fa-solid fa-location-dot"></i><span id="place"> Location</span></p>
+
+                </div>
+
+                <div id="two">
+                    <p id="highlights">Todays Highilights</p>
+
+                    <div class="mainbox">
+                        <div class="box1">
+                            <p id="air-spped">Air Index</p>
+                            <div class="mmm">
+
+                                <div class="box1-speed">
+                                    <p class="reset2">speed</p>
+                                    <p class="fa-solid fa-wind"> <span id="windSpeed">0 Km/ph</span></p>
+
+                                </div>
+                                <div class="box2-deg">
+                                    <p class="reset2">deg°</p>
+                                    <p class="fa-solid fa-compass"> <span id="winddeg">Deg</span></p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="box2">
+                            <p id="Sunrise">Sunrise & Sunset</p>
+                            <div class="mmm">
+                                <div class="box1-speed">
+                                    <p class="reset2">Sunrise</p>
+                                    <p class="fa-solid fa-sun"><span id="sunrise"> Sunrise</span></p>
+
+                                </div>
+                                <div class="box2-deg">
+                                    <p class="reset2">Sunset</p>
+                                    <p class="fa-solid fa-cloud-moon"> <span id="sunset"> Sunset</span></p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mainbox2">
+                        <div class="box11">
+
+                            <p id="Humidity">Humidity</p>
+                            <div class="mmm">
+
+                                <div class="box1-speed">
+
+                                    <p class="fas fa-cloud-rain" id="humidity"></p>
+
+                                </div>
+                                <div class="img-pos">
+                                    <p id="humi">Humidity%</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="box22">
+                            <p id="Humidity">Feels like</p>
+                            <div class="mmm">
+
+                                <div class="box1-speed">
+
+                                    <p class="fa-solid fa-temperature-half" id="humidity"></p>
+
+                                </div>
+                                <div class="img-pos">
+                                    <p id="feelslike">Feels like</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="box33">
+                            <p id="Humidity">Visibility</p>
+                            <div class="mmm">
+
+                                <div class="box1-speed">
+
+                                    <p class="fa-solid fa-eye" id="humidity"></p>
+
+                                </div>
+                                <div class="img-pos">
+                                    <p id="visibility">Visibility</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="box44">
+                            <p id="Humidity">Pressure</p>
+                            <div class="mmm">
+
+                                <div class="box1-speed">
+
+                                    <p class="fa-solid fa-water" id="humidity"></p>
+
+                                </div>
+                                <div class="img-pos">
+                                    <p id="pressure">Pressure</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <p id="tempday">5 Days Forecast</p>
+                <div class="wrapper2">
+                    <div id="one">
+                        <div class="tempdays">
+                            <div class="day1 day">
+                                <p id="day-w-img"><i class="fa-solid fa-cloud"></i></p>
+                                <div class="day-temp-box">
+                                    <div>
+                                        <p>0<sup>°C</sup></p>
+
+                                    </div>
+                                    <div>
+                                        <p>Date</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Day</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day2 day">
+                                <p id="day-w-img"><i class="fa-solid fa-cloud"></i></p>
+                                <div class="day-temp-box">
+                                    <div>
+                                        <p>0<sup>°C</sup></p>
+
+                                    </div>
+                                    <div>
+                                        <p>Date</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Day</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day3 day">
+                                <p id="day-w-img"><i class="fa-solid fa-cloud"></i></p>
+                                <div class="day-temp-box">
+                                    <div>
+                                        <p>0<sup>°C</sup></p>
+
+                                    </div>
+                                    <div>
+                                        <p>Date</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Day</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day4 day">
+                                <p id="day-w-img"><i class="fa-solid fa-cloud"></i></p>
+                                <div class="day-temp-box">
+                                    <div>
+                                        <p>0<sup>°C</sup></p>
+
+                                    </div>
+                                    <div>
+                                        <p>Date</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Day</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day5 day">
+                                <p id="day-w-img"><i class="fa-solid fa-cloud"></i></p>
+                                <div class="day-temp-box">
+                                    <div>
+                                        <p>0<sup>°C</sup></p>
+
+                                    </div>
+                                    <div>
+                                        <p>Date</p>
+
+                                    </div>
+
+                                    <div>
+                                        <p>Day</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <p>Today at</p>
+                    <div id="four">
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+                        <div class="box11 box111">
+
+                            <div class="c-time">
+                                <p><i class="fa-regular fa-moon" id="time-img"></i></p>
+                                <p>Time</p>
+                                <p>0<sup>°C</sup></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

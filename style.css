@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+:root {
+    --bgcolor: #101419;
+    --element: rgba(255, 255, 255, 0.14);
+    --element2: #10141986;
+    --headdings: rgba(128, 128, 128, 0.699);
+}
+
+.main {
+    z-index: 10;
+}
+
+.the-bapp {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+
+.body {
+    /* background-color: #000; */
+    background-image: linear-gradient(to right bottom, #0f1044, #161a5f, #1c257c, #20319a, #223dba);
+    width: 100vw;
+    height: 160vh;
+}
+
+#back {
+    position: absolute;
+    width: 100vw;
+    height: 160vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+    #back {
+        width: 100vw;
+        height: 280vh;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .body {
+        width: 100vw;
+        height: 170vh;
+
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .body {
+        width: 100vw;
+        height: 305vh;
+
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .body {
+        width: 100vw;
+        height: 360vh;
+
+    }
+}
+
+.nav-bar {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#logo1 img {
+    height: 60px;
+}
+
+@media screen and (max-width: 800px) {
+    #logo1 img {
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
+.search-container {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar input[type=text] {
+    padding: 9px;
+    font-size: 3vmin;
+    border: none;
+    float: left;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #0000007a;
+    outline: none;
+
+}
+
+.search-container button {
+    background-color: #0000007a;
+    padding: 9px 15px;
+    font-size: 3vmin;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.date {
+    padding: 4px;
+    background-color: var(--element2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.location {
+    padding: 4px;
+    background-color: var(--element2);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.wrapper {
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.wrapper div {
+    min-height: 140px;
+    padding: 10px;
+}
+
+#one {
+    background-color: var(--element);
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+#two {
+    background-color: var(--element);
+    overflow: hidden;
+    min-height: 270px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    #one {
+        float: none;
+        margin-right: 0;
+        width: auto;
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #three {
+        float: none;
+        margin-right: 0;
+        width: auto;
+        border: 0;
+    }
+}
+
+
+.wrapper2 {
+    overflow: hidden;
+
+
+}
+
+.wrapper2 div {
+    min-height: 92px;
+    padding: 10px;
+    min-width: 10px;
+}
+
+
+#three {
+    background-color: var(--element);
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+#four {
+    overflow: hidden;
+    min-height: 270px;
+    border-radius: 15px;
+}
+
+#now {
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+
+.weatherbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.temperature {
+    color: white;
+    font-size: 50px;
+}
+
+.weather-img {
+    color: white;
+    font-size: 50px;
+
+}
+
+.description {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-right: 160px;
+}
+
+
+
+
+.text-today {
+    height: auto;
+    font-size: 25px;
+    color: white;
+}
+
+
+#highlights {
+    font-size: 20px;
+}
+
+.mainbox {
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.box1 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 30vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.box2 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 30vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+
+}
+
+
+.mainbox2 {
+    /* background-color:greenyellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+
+.box11 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 13vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+
+}
+
+.box22 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 13vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+
+}
+
+.box33 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 13vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.box44 {
+    background-color: var(--element2);
+    height: 10px;
+    width: 13vw;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+#airspeed {
+    font-size: 15px;
+}
+
+.mmm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box1-speed {
+    font-size: 25;
+}
+
+.sunrise {
+    font-size: 15px;
+}
+
+#humidity {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.img-pos :first-child {
+    margin-top: 20px;
+}
+
+#four {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box111 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10vh;
+    width: 6vw;
+    background-color: var(--element);
+}
+
+#time-img {
+    font-size: 30px;
+}
+
+#day-w-img {
+    font-size: 30px;
+}
+
+.tempdays {
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 40vh;
+    gap: 10PX;
+}
+
+.day {
+    align-items: center;
+    width: 20vw;
+    background-color: var(--element2);
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+}
+
+.day-temp-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#air-spped {
+    color: var(--headdings);
+}
+
+#Sunrise {
+    color: var(--headdings);
+
+}
+
+#Humidity {
+    color: var(--headdings);
+
+}
+
+#date {
+
+    color: #ecececc5;
+}
+
+#place {
+    color: #ecececc5;
+
+}
+
+.day-temp-box :first-child {
+    color: var(--headdings);
+
+}
+
+.reset2 {
+    color: var(--headdings);
+}
+
+.weatherbox img {
+    height: 70px;
+    width: 70px;
+    margin-top: 2px;
+}
+
+.w-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#tempday {
+    display: flex;
+    text-align: center;
+
+}
+
+.currentlocation {
+    font-size: 1.5vmin;
+
+}
+
+
+.currentlocation p {
+    color: #0955c7;
+    text-wrap: nowrap;
+}
+
+.currentlocation i {
+    color: #0955c7;
+}
+
+.day-temp-box>div {
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1066px) {
+    .box1 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+
+    }
+}
+
+@media screen and (max-width: 1066px) {
+    .box2 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .box11 {
+        float: none;
+        margin-right: 0;
+        width: 20vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+        flex-direction: row;
+        background-color: var(--element2);
+
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .box22 {
+        float: none;
+        margin-right: 0;
+        width: 20vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+        flex-direction: row;
+        background-color: var(--element2);
+
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .box33 {
+        float: none;
+        margin-right: 0;
+        width: 20vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+        flex-direction: row;
+        background-color: var(--element2);
+
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .box44 {
+        float: none;
+        margin-right: 0;
+        width: 20vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+        flex-direction: row;
+        background-color: var(--element2);
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box1 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .box2 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .box11 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box22 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box33 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .box44 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .day {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .box111 {
+        float: none;
+        margin-right: 0;
+        width: 80vw;
+        border: 0;
+        border-bottom: 2px solid #000;
+        flex-direction: row;
+        background-color: var(--element2);
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .c-time {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #four {
+        background-color: var(--element);
+        height: 65vh;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #two {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .temperature {
+        font-size: 10vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .w-box img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .description {
+        font-size: 3vh;
+        margin-left: 150px;
+        padding: 1px 55px;
+        border-radius: 15px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .temperature {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .currentlocation {
+        padding: 4px 4px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .search-container {
+        padding: 4px 4px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .search-container>input {
+        padding: 4px 4px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .btn-location p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .currentlocation i {
+        font-size: 14px;
+    }
+}
+
+
+.btn-location {
+    background-color: #0000002a;
+    border: none;
+    outline: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid #0955c7;
+    padding: 10px 10px;
+    border-radius: 35px;
+}
+
+.btn-location:hover {
+    background-color: wheat;
+}
+
+#logo1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
